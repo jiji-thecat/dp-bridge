@@ -13,14 +13,16 @@ SOURCES += \
     cat-sub.cpp \
     dog-sub.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    osaka-behavior.cpp
 
 HEADERS += \
     animal-super.h \
     behavior.h \
     cat-sub.h \
     dog-sub.h \
-    mainwindow.h
+    mainwindow.h \
+    osaka-behavior.h
 
 FORMS += \
     mainwindow.ui

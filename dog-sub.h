@@ -4,6 +4,7 @@
 #include <QString>
 #include "animal-super.h"
 
+// 実装クラス
 class DogSub : public AnimalSuper
 {
 public:

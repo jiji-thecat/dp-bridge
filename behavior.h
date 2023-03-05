@@ -4,6 +4,7 @@
 #include <QString>
 #include "animal-super.h"
 
+// 機能クラス
 class Behavior
 {
 public:

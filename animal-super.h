@@ -3,6 +3,7 @@
 
 #include <QString>
 
+// 実装クラス
 class AnimalSuper
 {
 public:

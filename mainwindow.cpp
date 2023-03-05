@@ -1,6 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "behavior.h"
+#include "osaka-behavior.h"
+#include "cat-sub.h"
+#include "animal-super.h"
+#include "dog-sub.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -32,11 +38,20 @@ void MainWindow::buttonClicked()
 {
    qDebug() << "clicked";
    CatSub catSub("にゃん", ":/assets/cat.png");
-   setImageLabel(catSub.getImage());
-
    Behavior catBehavior(catSub);
-   //qDebug() << catBehavior.playSound();
-   setSoundLabel(catBehavior.playSound());
+   OsakaBehavior catOsakaBehavior(catSub);
+
+   setImageLabel(catSub.getImage());
+   setSoundLabel("Behavior: " + catBehavior.playSound());
+   setSoundLabel("OsakaBehavior: " + catOsakaBehavior.playSoundWithDialect());
+
+   DogSub dogSub("わん", ":/assets/dog.png");
+   Behavior dogBehavior(dogSub);
+   OsakaBehavior dogOsakaBehavior(dogSub);
+
+   setImageLabel(dogSub.getImage());
+   setSoundLabel("Behavior: " + dogBehavior.playSound());
+   setSoundLabel("Osaka Behavior: " + dogOsakaBehavior.playSoundWithDialect());
 }
 
 void MainWindow::setButton()

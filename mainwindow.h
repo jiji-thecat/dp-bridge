@@ -7,10 +7,6 @@
 #include <QPushButton>
 #include <QLabel>
 
-#include "behavior.h"
-#include "cat-sub.h"
-#include "animal-super.h"
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
